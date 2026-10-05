@@ -10,7 +10,7 @@ struct Mahasiswa {
 };
 
 Mahasiswa* head = nullptr;
-
+// Menambah node baru di depan daftar
 void insertHead(string nim, string nama, float persentaseKehadiran) {
     Mahasiswa* mahasiswaBaru = new Mahasiswa;
 
@@ -83,7 +83,7 @@ void deleteLast() {
 
     cout << "Mahasiswa paling belakang berhasil dihapus." << endl;
 }
-
+// Menampilkan seluruh isi daftar
 void cetakDaftar() {
     if (head == nullptr) {
         cout << "Daftar mahasiswa kosong." << endl;
@@ -112,7 +112,7 @@ void cetakDaftar() {
 }
 
 int main() {
-
+// 16 data siswa
     insertLast("101", "Mahesa", 95);
     insertLast("102", "Layya", 90);
     insertLast("103", "Gyio", 88);
