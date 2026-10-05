@@ -44,6 +44,46 @@ void insertLast(string nim, string nama, float persentaseKehadiran) {
     current->next = mahasiswaBaru;
 }
 
+void deleteHead() {
+    if (head == nullptr) {
+        cout << "Daftar mahasiswa kosong." << endl;
+        return;
+    }
+
+    Mahasiswa* temp = head;
+    head = head->next;
+
+    delete temp;
+
+    cout << "Mahasiswa paling depan berhasil dihapus." << endl;
+}
+
+void deleteLast() {
+    if (head == nullptr) {
+        cout << "Daftar mahasiswa kosong." << endl;
+        return;
+    }
+
+    if (head->next == nullptr) {
+        delete head;
+        head = nullptr;
+
+        cout << "Mahasiswa paling belakang berhasil dihapus." << endl;
+        return;
+    }
+
+    Mahasiswa* current = head;
+
+    while (current->next->next != nullptr) {
+        current = current->next;
+    }
+
+    delete current->next;
+    current->next = nullptr;
+
+    cout << "Mahasiswa paling belakang berhasil dihapus." << endl;
+}
+
 int main() {
     return 0;
 }
