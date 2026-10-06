@@ -18,6 +18,7 @@ void insertHead(string nim, string nama, float persentaseKehadiran) {
     mahasiswaBaru->nama = nama;
     mahasiswaBaru->persentaseKehadiran = persentaseKehadiran;
     mahasiswaBaru->next = head;
+    
 
     head = mahasiswaBaru;
 }
