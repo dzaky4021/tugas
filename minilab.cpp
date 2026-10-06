@@ -66,3 +66,12 @@ int main() {
 
     return 0;
 }
+
+void insertHead(string nim, string nama, float persentaseKehadiran) {
+    Mahasiswa* mahasiswaBaru = new Mahasiswa;
+    mahasiswaBaru->nim = nim;
+    mahasiswaBaru->nama = nama;
+    mahasiswaBaru->persentaseKehadiran = persentaseKehadiran;
+    mahasiswaBaru->next = head;
+    head = mahasiswaBaru;
+}
