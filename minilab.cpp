@@ -75,3 +75,19 @@ void insertHead(string nim, string nama, float persentaseKehadiran) {
     mahasiswaBaru->next = head;
     head = mahasiswaBaru;
 }
+
+if (pilihan == 1) {
+            string nim, nama;
+            float kehadiran;
+
+            cout << "Masukkan NIM: ";
+            cin >> nim;
+            cout << "Masukkan Nama: ";
+            cin.ignore();
+            getline(cin, nama);
+            cout << "Masukkan Persentase Kehadiran: ";
+            cin >> kehadiran;
+
+            insertHead(nim, nama, kehadiran);
+            cout << "Mahasiswa berhasil ditambahkan di depan." << endl;
+        }
